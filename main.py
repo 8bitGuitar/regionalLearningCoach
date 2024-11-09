@@ -15,8 +15,6 @@ from nltk.tokenize import sent_tokenize
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-
-
 try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
@@ -286,7 +284,7 @@ class RAGChatbot:
             )
             
             if not search_results.matches:
-                return history + [[message, "I couldn't find any relevant information in the uploaded documents. Please ensure documents are properly processed and wait a few seconds before trying again."]], ""
+                return history + [[message, "मैं अपलोड किए गए दस्तावेजों में कोई संबंधित जानकारी नहीं ढूंढ सका। कृपया सुनिश्चित करें कि दस्तावेज सही तरीके से प्रोसेस किए गए हैं और फिर से प्रयास करने से पहले कुछ सेकंड का इंतजार करें।"]], ""
             
             context_with_sources = []
             chunks_display = []
