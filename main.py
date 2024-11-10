@@ -122,7 +122,7 @@ class RAGChatbot:
     def __init__(self):
         self.processor = DocumentProcessor()
         self.pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-        self.index_name = "ragchatbot"
+        self.index_name = "ragchatbot" #change accordingly
         self.current_namespace = None
         
         model_path = "MBZUAI/Llama-3-Nanda-10B-Chat"
@@ -133,7 +133,7 @@ class RAGChatbot:
             device_map = "auto", 
             trust_remote_code = True,
             use_auth_token = os.getenv("USE_AUTH_TOKEN"),
-            offload_folder = "/home/aditya/Documents/AgenticSystems101/offloader"
+            offload_folder = "/your/offload/folder/path/here"
         )
         
         max_retries = 3
@@ -144,7 +144,7 @@ class RAGChatbot:
                 if self.index_name in self.pc.list_indexes().names():
                     self.pc.delete_index(self.index_name)
                     time.sleep(2)
-                
+                #change accordingly
                 self.pc.create_index(
                     name=self.index_name,
                     dimension=768,
@@ -184,7 +184,6 @@ class RAGChatbot:
                     print(f"Error cleaning up namespace: {str(e)}")
 
     def process_uploaded_files(self, files, request: gr.Request) -> str:
-        """Process uploaded files and store their embeddings in Pinecone."""
         if not request or not request.session_hash:
             return "Error: No session information available"
             
