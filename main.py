@@ -133,7 +133,7 @@ class RAGChatbot:
             device_map = "auto", 
             trust_remote_code = True,
             use_auth_token = os.getenv("USE_AUTH_TOKEN"),
-            offload_folder = "/your/offload/folder/path/here"
+            offload_folder = "/your/offload/folder/path/here" #change accordingly
         )
         
         max_retries = 3
@@ -374,7 +374,7 @@ def create_demo():
         )
 
     return demo
-
+#Todo : add function calls for advanced math 
 if __name__ == "__main__":
     demo = create_demo()
     demo.launch(share=True)
