@@ -1,0 +1,1 @@
+A powerful MBZUAI/Llama-3-Nanda-10B powered bilingual chatbot that aims to bridge language gaps in education by providing intelligent translations and interactive explanations of complex concepts in the user's native language (In demo : Hindi).
