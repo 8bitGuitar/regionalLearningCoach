@@ -1,1 +1,1 @@
-A powerful MBZUAI/Llama-3-Nanda-10B powered bilingual chatbot that aims to bridge language gaps in education by providing intelligent translations and interactive explanations of complex concepts in the user's native language (In demo : Hindi).
+A powerful bilingual chatbot powered by MBZUAI's Llama-3-Nanda-10B model, designed to bridge language gaps in education. It delivers intelligent translations and explanations, providing interactive Q&A for complex concepts in the user's native language (In Demo: Hindi).
